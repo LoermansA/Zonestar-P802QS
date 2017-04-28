@@ -12,6 +12,7 @@ Contains my settings for the 1.0.0.dev version of the Repetier firmware with the
 
 Everything seems to be working fine, except the autolevel feature. That's a work in progress. I haven't tested the filament runout feature yet.
 
+#### Using and flashing
 You can use this Configuration.h in the dev version of the Repetier configurator to finetune and download a complete firmware source package:
 
 https://www.repetier.com/firmware/dev/index.php
