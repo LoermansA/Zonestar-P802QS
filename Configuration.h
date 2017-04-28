@@ -97,14 +97,14 @@
 #define EXT0_MAX_FEEDRATE 50
 #define EXT0_MAX_START_FEEDRATE 20
 #define EXT0_MAX_ACCELERATION 3000
-#define EXT0_HEAT_MANAGER 0
+#define EXT0_HEAT_MANAGER 1
 #define EXT0_PREHEAT_TEMP 190
 #define EXT0_WATCHPERIOD 1
 #define EXT0_PID_INTEGRAL_DRIVE_MAX 230
 #define EXT0_PID_INTEGRAL_DRIVE_MIN 40
 #define EXT0_PID_PGAIN_OR_DEAD_TIME 7
-#define EXT0_PID_I 2
-#define EXT0_PID_D 40
+#define EXT0_PID_I 1
+#define EXT0_PID_D 120
 #define EXT0_PID_MAX 255
 #define EXT0_ADVANCE_K 0
 #define EXT0_ADVANCE_L 0
@@ -297,11 +297,11 @@ It also can add a delay to wait for spindle to run on full speed.
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
-#define X_MAX_LENGTH 220
-#define Y_MAX_LENGTH 220
+#define X_MAX_LENGTH 235
+#define Y_MAX_LENGTH 225
 #define Z_MAX_LENGTH 240
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define X_MIN_POS -13
+#define Y_MIN_POS -3
 #define Z_MIN_POS 0
 #define Z2_MINMAX_PIN -1
 
@@ -359,11 +359,11 @@ It also can add a delay to wait for spindle to run on full speed.
 #define STEP_DOUBLER_FREQUENCY 12000
 #define ALLOW_QUADSTEPPING 1
 #define DOUBLE_STEP_DELAY 0 // time in microseconds
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 800
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 800
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 800
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 800
 #define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
 #define INTERPOLATE_ACCELERATION_WITH_Z 0
 #define ACCELERATION_FACTOR_TOP 100
@@ -455,18 +455,18 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_SWITCHING_DISTANCE 5
 #define Z_PROBE_REPETITIONS 1
 #define Z_PROBE_HEIGHT 4
-#define Z_PROBE_START_SCRIPT ""
+#define Z_PROBE_START_SCRIPT "G1 Z5\r"
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
 #define Z_PROBE_REQUIRES_HEATING 0
 #define Z_PROBE_MIN_TEMPERATURE 150
 #define FEATURE_AUTOLEVEL 1
 #define FEATURE_SOFTWARE_LEVELING 0
-#define Z_PROBE_X1 20
+#define Z_PROBE_X1 -20
 #define Z_PROBE_Y1 20
 #define Z_PROBE_X2 160
 #define Z_PROBE_Y2 20
-#define Z_PROBE_X3 100
+#define Z_PROBE_X3 -20
 #define Z_PROBE_Y3 160
 #define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
@@ -514,8 +514,8 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define LANGUAGE_CZ_ACTIVE 0
 #define LANGUAGE_PL_ACTIVE 0
 #define LANGUAGE_TR_ACTIVE 0
-#define UI_PRINTER_NAME "p802q"
-#define UI_PRINTER_COMPANY "Zonestar 3D"
+#define UI_PRINTER_NAME "P802Q"
+#define UI_PRINTER_COMPANY "Zonestar 3D KIT"
 #define UI_PAGES_DURATION 4000
 #define UI_SPEEDDEPENDENT_POSITIONING 0
 #define UI_DISABLE_AUTO_PAGESWITCH 1
@@ -558,7 +558,7 @@ Values must be in range 1..255
 
 ========== Start configuration string ==========
 {
-    "editMode": 1,
+    "editMode": 2,
     "processor": 0,
     "baudrate": 115200,
     "bluetoothSerial": -1,
@@ -576,7 +576,7 @@ Values must be in range 1..255
     "extruder": [
         {
             "id": 0,
-            "heatManager": 0,
+            "heatManager": 1,
             "pidDriveMin": 40,
             "pidDriveMax": 230,
             "pidMax": 255,
@@ -590,8 +590,8 @@ Values must be in range 1..255
             "acceleration": 3000,
             "watchPeriod": 1,
             "pidP": 7,
-            "pidI": 2,
-            "pidD": 40,
+            "pidI": 1,
+            "pidD": 120,
             "advanceK": 0,
             "advanceL": 0,
             "waitRetractTemp": 150,
@@ -641,12 +641,12 @@ Values must be in range 1..255
     "driveSystem": 0,
     "xMaxSpeed": 200,
     "xHomingSpeed": 40,
-    "xTravelAcceleration": 1000,
-    "xPrintAcceleration": 1000,
+    "xTravelAcceleration": 800,
+    "xPrintAcceleration": 800,
     "yMaxSpeed": 200,
     "yHomingSpeed": 40,
-    "yTravelAcceleration": 1000,
-    "yPrintAcceleration": 1000,
+    "yTravelAcceleration": 800,
+    "yPrintAcceleration": 800,
     "zMaxSpeed": 2,
     "zHomingSpeed": 2,
     "zTravelAcceleration": 100,
@@ -675,11 +675,11 @@ Values must be in range 1..255
     "backlashZ": 0,
     "stepperInactiveTime": 360,
     "maxInactiveTime": 0,
-    "xMinPos": 0,
-    "yMinPos": 0,
+    "xMinPos": -13,
+    "yMinPos": -3,
     "zMinPos": 0,
-    "xLength": 220,
-    "yLength": 220,
+    "xLength": 235,
+    "yLength": 225,
     "zLength": 240,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
@@ -776,8 +776,8 @@ Values must be in range 1..255
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_XYZ",
     "featureController": 24,
-    "uiPrinterName": "p802q",
-    "uiPrinterCompany": "Zonestar 3D",
+    "uiPrinterName": "P802Q",
+    "uiPrinterCompany": "Zonestar 3D KIT",
     "uiPagesDuration": 4000,
     "uiHeadline": "",
     "uiDisablePageswitch": "1",
@@ -887,14 +887,14 @@ Values must be in range 1..255
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
     "zProbeHeight": 4,
-    "zProbeStartScript": "",
+    "zProbeStartScript": "G1 Z5\\r",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
-    "zProbeX1": 20,
+    "zProbeX1": -20,
     "zProbeY1": 20,
     "zProbeX2": 160,
     "zProbeY2": 20,
-    "zProbeX3": 100,
+    "zProbeX3": -20,
     "zProbeY3": 160,
     "zProbeSwitchingDistance": 5,
     "zProbeRepetitions": 1,

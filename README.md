@@ -9,6 +9,7 @@ Contains my settings for the 1.0.0.dev version of the Repetier firmware with the
 * Inverted X and Y steppermotors direction
 * Heated bed
 * 2 fans; one for the hotend and one for cooling the filament
+* Baudrate 115200
 
 Everything seems to be working fine, except the autolevel feature. That's a work in progress. I haven't tested the filament runout feature yet.
 
@@ -24,3 +25,4 @@ https://www.arduino.cc/en/main/software
 With the following board settings:
 * Board type: "Arduino/Genuine Mega or Mega 2560"
 * Processor type: "ATmega2560 (Mega 2560)"
+* Baudrate 115200
