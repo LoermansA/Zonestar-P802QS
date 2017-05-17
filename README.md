@@ -20,11 +20,11 @@ This is my initial (fully working) example configuration for a Reprapdiscount Fu
 
 The buttons seem to be working fine and there was no need to include any graphic library.
 
-Still to be tested/implemented:
+### Still to be tested/implemented:
 * autolevel feature, that's a work in progress
 * filament runout feature
 
-#### Using and flashing
+### Using and flashing
 You can use this Configuration.h in the dev version of the Repetier configurator to finetune and download a complete firmware source package:
 
 https://www.repetier.com/firmware/dev/index.php
